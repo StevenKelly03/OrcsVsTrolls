@@ -1,5 +1,5 @@
 #include <./include/Orc.h>
 
-void Orc::barrelRoll() { std::cout << "rooooooolllllllllllinggggggg" << std::endl; }
-void Orc::walk() { std::cout << "Doopers have a really cool walk!" << std::endl; }
-void Orc::fly() { std::cout << "Dooper is flapping and flying" << std::endl; }
+void Orc::barrelRoll() { std::cout << "ORC : rooooooolllllllllllinggggggg" << std::endl; }
+void Orc::walk() { std::cout << "ORC : Doopers have a really cool walk!" << std::endl; }
+void Orc::fly() { std::cout << "ORC : Dooper is flapping and flying" << std::endl; }

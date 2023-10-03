@@ -1,4 +1,7 @@
+# Compiler
 CXX			:= g++
+
+# CPP standard
 CXXFLAGS 	:= -std=c++11 -Wall -Wextra -Werror -g -I.
 
 MSG_START	:= "Build Started"
@@ -8,7 +11,14 @@ MSG_CLEAN	:= "Cleaning up"
 BUILD_DIR	:= ./bin
 SRC_DIR		:= ./src
 
-TARGET		:= ${BUILD_DIR}/sampleapp.bin
+
+ifeq ($(OS),Windows_NT)
+    os  := Windows
+	TARGET		:= ${BUILD_DIR}/game.exe
+else
+	os := $(shell uname -s)
+	TARGET		:= ${BUILD_DIR}/game.bin
+endif
 
 SRC			:= ${SRC_DIR}/main.cpp ${SRC_DIR}/Troll.cpp ${SRC_DIR}/Orc.cpp ${SRC_DIR}/Character.cpp
 

@@ -7,6 +7,8 @@ using namespace std;
 
 int main() {
 	cout << "Let go virtual" << endl;
+
+	// Uncompile and understand the errors produced
 	//Character character;
 	//character.flip();
 	//character.walk();
@@ -24,13 +26,13 @@ int main() {
 	troll.flip();
 
 	Character* npc = &orc;
-	npc->flip();
-	npc->fly();
+	npc->flip(); // Bound at compile time -> action based on type
+	npc->fly();  // Bound at runtime -> action based on pointer
 	npc->walk();
 
 	npc = &troll;
-	npc->flip();
-	npc->fly();
+	npc->flip(); // Bound at compile time -> action based on type
+	npc->fly();  // Bound at runtime -> action based on pointer
 	npc->walk();
 
 	cin.get();
