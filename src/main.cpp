@@ -14,26 +14,28 @@ int main() {
 	//character.walk();
 
 	cout << "Let go create an Orc" << endl;
-	Orc orc;
-	orc.walk();
-	orc.fly();
-	orc.flip();
+	Orc orc;		// Creates a Orc reference
+	orc.walk();		// Method call walk
+	orc.fly();		// Method call fly
+	orc.flip();		// Method call flip
 
 	cout << "Let go create an Troll" << endl;
-	Troll troll;
-	troll.walk();
-	troll.fly();
-	troll.flip();
+	Troll troll;	// Creates a Troll reference
+	troll.walk();	// Method call walk
+	troll.fly();	// Method call fly
+	troll.flip();	// Method call flip
 
+	// Assign Orc memory address to npc pointer
 	Character* npc = &orc;
-	npc->flip(); // Bound at compile time -> action based on type
-	npc->fly();  // Bound at runtime -> action based on pointer
-	npc->walk();
+	npc->flip(); 	// Bound at compile time -> action based on type
+	npc->fly();  	// Bound at runtime -> action based on pointer
+	npc->walk(); 	// Bound at runtime -> action based on pointer
 
-	npc = &troll;
-	npc->flip(); // Bound at compile time -> action based on type
-	npc->fly();  // Bound at runtime -> action based on pointer
-	npc->walk();
+	// Assign Troll memory address to npc pointer
+	npc = &troll; 
+	npc->flip(); 	// Bound at compile time -> action based on type
+	npc->fly();  	// Bound at runtime -> action based on pointer
+	npc->walk();	// Bound at runtime -> action based on pointer
 
 	cin.get();
 
