@@ -32,4 +32,4 @@ Install this plugin,
 * Debugging with VSC beyond return point may result in the following error message being displayed [pop up](https://github.com/Microsoft/vscode-cpptools/issues/1123)
 
 ## Who do I talk to? ##
-* philip.bourke@itcarlow.ie
+* philip.bourke@setu.ie
