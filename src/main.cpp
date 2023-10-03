@@ -8,7 +8,7 @@ using namespace std;
 int main() {
 	cout << "Let go virtual" << endl;
 
-	// Uncompile and understand the errors produced
+	// Uncomment and try to compile. Why are errors produced?
 	//Character character;
 	//character.flip();
 	//character.walk();
